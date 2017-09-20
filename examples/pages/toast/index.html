@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1"/>
+  <title>Toast</title>
+  <link rel="stylesheet" href="/faerie/css/normalize.css">
+  <link rel="stylesheet" href="/faerie/css/github.css">
+  <style type="text/css">
+    .fr-button:not(:last-child) {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+<layout id="app">
+  <h1>Toast</h1>
+  <!-- 示例 -->
+  <br>
+  <h4>示例</h4>
+  <div>
+    <fr-button @click.native="$toast('hello faerie！')">默认显示</fr-button>
+    <fr-button @click.native="$toast({message: '显示1秒！', duration: 1000})">显示1秒</fr-button>
+  </div>
+  <!-- 代码 -->
+  <br>
+  <h4>代码</h4>
+  <pre>
+      <code data-language="javascript">
+        // 简洁用法
+        this.$toast('hello faerie！');
+
+        // 自定义时间
+        this.$toast({
+          message: 'hello faerie！',
+          duration: 1000, // 默认2500毫秒
+        });
+      </code>
+  </pre>
+</layout>
+
+<script src="/faerie/js/rainbow/rainbow.js"></script>
+<script src="/faerie/js/rainbow/language/html.js"></script>
+</body>
+</html>

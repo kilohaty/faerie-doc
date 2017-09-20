@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1"/>
+  <title>按钮</title>
+  <link rel="stylesheet" href="/faerie/css/normalize.css">
+  <link rel="stylesheet" href="/faerie/css/github.css">
+  <style type="text/css">
+    .fr-button:not(:last-child) {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+<layout id="app">
+  <h1>按钮</h1>
+  <!-- 示例 -->
+  <br>
+  <h4>示例</h4>
+  <div>
+    <fr-button>立即领取</fr-button>
+    <fr-button theme="pink">立即领取</fr-button>
+    <fr-button theme="blue">立即领取</fr-button>
+    <fr-button disabled>已领取</fr-button>
+  </div>
+  <!-- 代码 -->
+  <br>
+  <h4>代码</h4>
+  <pre>
+    <code data-language="html">
+      &lt;fr-button&gt;立即领取&lt;fr-button&gt; &lt;!-- 默认样式 --&gt;
+      &lt;fr-button theme="pink"&gt;立即领取&lt;fr-button&gt; &lt;!-- pink主题 --&gt;
+      &lt;fr-button theme="blue"&gt;立即领取&lt;fr-button&gt; &lt;!-- blue主题 --&gt;
+      &lt;fr-button disabled&gt;立即领取&lt;fr-button&gt; &lt;!-- 禁用状态 --&gt;
+    </code>
+  </pre>
+</layout>
+
+<script src="/faerie/js/rainbow/rainbow.js"></script>
+<script src="/faerie/js/rainbow/language/html.js"></script>
+</body>
+</html>
