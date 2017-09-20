@@ -44,7 +44,7 @@ Object.keys(proxyTable).forEach(context => {
   }
   app.use(proxyMiddleware(options.filter || context, options));
 });
-app.get('/', (req, res) => res.redirect('/pages/start/index.html'));
+app.get('/', (req, res) => res.redirect('/start/index.html'));
 app.use(require('connect-history-api-fallback')());
 app.use(devMiddleware);
 app.use(hotMiddleware);
