@@ -72,9 +72,9 @@
   </div>
   <div class="op-panel">
     <p>当前每个楼层商品数量：{{floorItemNum - 1}}</p>
-    <fr-button @click.native="change">改变商品</fr-button>
-    <fr-button @click.native="recalc">重新计算</fr-button>
-    <fr-button @click.native="goto">手动跳转</fr-button>
+    <fr-button @click="change">改变商品</fr-button>
+    <fr-button @click="recalc">重新计算</fr-button>
+    <fr-button @click="goto">手动跳转</fr-button>
   </div>
   <div v-for="(item, index) in catMap.length * floorItemNum" class="content-list">
     <div v-if="index % floorItemNum === 0"
