@@ -41,8 +41,8 @@
     <h4>属性</h4>
     <pre v-pre>
       <code data-language="html">
-        data-fr-author   // 在slot插槽内，标记为锚点的元素
-        data-fr-author-target // 标记为锚点目标的元素
+        data-fr-anchor   // 在slot插槽内，标记为锚点的元素
+        data-fr-anchor-target // 标记为锚点目标的元素
       </code>
     </pre>
 
@@ -57,13 +57,13 @@
                 &lt;!-- 锚点导航 --&gt;
                 &lt;fr-anchor-nav v-model="activeAnchor" :data-model="dataModal" :trigger-distance="60"&gt;
                         &lt;!-- 导航分类 --&gt;
-                        &lt;span class="nav-item" data-fr-author="name_01" :class="{'active': activeAnchor === 'name_01'}"&gt;
+                        &lt;span class="nav-item" data-fr-anchor="name_01" :class="{'active': activeAnchor === 'name_01'}"&gt;
                             家居日用
                         &lt;span&gt;
-                        &lt;span class="nav-item" data-fr-author="name_02" :class="{'active': activeAnchor === 'name_02'}"&gt;
+                        &lt;span class="nav-item" data-fr-anchor="name_02" :class="{'active': activeAnchor === 'name_02'}"&gt;
                             进口零食
                         &lt;span&gt;
-                        &lt;span class="nav-item" data-fr-author="name_03" :class="{'active': activeAnchor === 'name_03'}"&gt;
+                        &lt;span class="nav-item" data-fr-anchor="name_03" :class="{'active': activeAnchor === 'name_03'}"&gt;
                             基础护肤
                         &lt;span&gt;
                         &lt;!-- 省略 --&gt;
@@ -72,21 +72,21 @@
 
               &lt;!-- 楼层商品 --&gt;
               &lt;div&gt;
-                  &lt;div data-fr-author-target="name_01">家居日用&lt;/div&gt;
+                  &lt;div data-fr-anchor-target="name_01">家居日用&lt;/div&gt;
                   &lt;p&gt;商品0 &lt;/p&gt;
                   &lt;p&gt;商品1 &lt;/p&gt;
                   &lt;p&gt;商品2 &lt;/p&gt;
                   &lt;p&gt;商品3 &lt;/p&gt;
                   &lt;p&gt;商品4 &lt;/p&gt;
                   &lt;!-- 省略 --&gt;
-                  &lt;div data-fr-author-target="name_02">进口零食&lt;/div&gt;
+                  &lt;div data-fr-anchor-target="name_02">进口零食&lt;/div&gt;
                   &lt;p&gt;商品0 &lt;/p&gt;
                   &lt;p&gt;商品1 &lt;/p&gt;
                   &lt;p&gt;商品2 &lt;/p&gt;
                   &lt;p&gt;商品3 &lt;/p&gt;
                   &lt;p&gt;商品4 &lt;/p&gt;
                   &lt;!-- 省略 --&gt;
-                  &lt;div data-fr-author-target="name_03">基础护肤&lt;/div&gt;
+                  &lt;div data-fr-anchor-target="name_03">基础护肤&lt;/div&gt;
                   &lt;p&gt;商品0 &lt;/p&gt;
                   &lt;p&gt;商品1 &lt;/p&gt;
                   &lt;p&gt;商品2 &lt;/p&gt;
