@@ -39,7 +39,7 @@
       background-color: #ddd;
     }
 
-    .author-target {
+    .anchor-target {
       color: #fff;
       background-color: #0081f5;
     }
@@ -64,7 +64,7 @@
 
         <span v-for="(item, index) in catMap"
               class="nav-item"
-              :data-fr-author="`anchor` + index"
+              :data-fr-anchor="`anchor` + index"
               :class="{'active': activeAnchor === `anchor` + index}">
           {{item}}
         </span>
@@ -78,8 +78,8 @@
   </div>
   <div v-for="(item, index) in catMap.length * floorItemNum" class="content-list">
     <div v-if="index % floorItemNum === 0"
-         :data-fr-author-target="`anchor` + index / floorItemNum"
-         class="author-target">{{catMap[index / floorItemNum]}}
+         :data-fr-anchor-target="`anchor` + index / floorItemNum"
+         class="anchor-target">{{catMap[index / floorItemNum]}}
     </div>
     <p v-else>{{'商品' + index}}</p>
   </div>
