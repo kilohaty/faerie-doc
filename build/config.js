@@ -9,6 +9,7 @@ module.exports = {
     'anchor-nav/index',
     'anchor-nav-demo/index',
     'button/index',
+    'scroll/index',
     'toast/index',
   ],
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1"/>
+  <title>滚动容器</title>
+  <link rel="stylesheet" href="/faerie/css/normalize.css">
+  <link rel="stylesheet" href="/faerie/css/github.css">
+  <style type="text/css">
+    .fr-scroll {
+      font-size: 0;
+    }
+
+    .scroll-wrapper {
+      max-width: 375px;
+      height: 60px;
+      border: 1px solid #2b2b2b;
+    }
+
+    .scroll-item {
+      display: inline-block;
+      width: 150px;
+      line-height: 60px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #0081f5;
+    }
+
+    .scroll-item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .scroll-item:nth-child(2n) {
+      background-color: #fa5d6c;
+    }
+  </style>
+</head>
+<body>
+<layout id="app">
+  <h1>滚动容器</h1>
+  <!-- 示例 -->
+  <br>
+  <h4>示例</h4>
+  <div>
+    <div class="scroll-wrapper">
+      <fr-scroll :auto-center="true" :el-selector="elSelector">
+        <span class="scroll-item"
+              :class="'scroll-item-' + i"
+              @click="centerEle(i)"
+              v-for="i in 10">
+          条目 {{i}}
+        </span>
+      </fr-scroll>
+    </div>
+  </div>
+  <!-- Props -->
+  <br>
+  <h4>代码</h4>
+  <pre>
+    <code data-language="html">
+      direction // {String} 滚动方向，默认水平方向。可选值：horizontal | vertical
+      autoCenter // {Boolean} 是否开启自动居中功能，暂不支持竖直方向
+      elSelector // {Boolean} 需要居中的元素选择器
+    </code>
+  </pre>
+
+  <!-- 代码 -->
+  <br>
+  <h4>代码</h4>
+  <pre>
+    <code data-language="html">
+      &lt;fr-scroll
+          :auto-center="true"
+          :el-selector="elSelector"&gt;
+
+      &lt;span class="scroll-item"
+               :class="'scroll-item-' + i"
+               @click="centerEle('.scroll-item-' + i)"
+               v-for="i in 10"&gt;
+               条目文案
+      &lt;/span&gt;
+      &lt;/fr-scroll&gt;
+    </code>
+  </pre>
+
+  <pre>
+    <code data-language="javascript" v-pre>
+      new Vue({
+        el: '#app',
+        data() {
+          return {
+            elSelector: '',
+          }
+        },
+        methods: {
+          centerEle(selector) {
+            this.elSelector = selector;
+            this.$nextTick(() => this.elSelector = '');
+          }
+        },
+      });
+
+    </code>
+  </pre>
+</layout>
+
+<script src="/faerie/js/rainbow/rainbow.js"></script>
+<script src="/faerie/js/rainbow/language/html.js"></script>
+<script src="/faerie/js/rainbow/language/javascript.js"></script>
+</body>
+</html>

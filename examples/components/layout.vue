@@ -46,6 +46,7 @@
           {page: 'start', nameZh: '开始使用'},
           {page: 'button', nameZh: '按钮'},
           {page: 'toast', nameZh: 'Toast'},
+          {page: 'scroll', nameZh: '滚动容器'},
           {page: 'anchor-nav', nameZh: '锚点导航'},
         ],
       }
