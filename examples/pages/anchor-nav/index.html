@@ -33,6 +33,8 @@
         value //  {String} 当前激活的锚点名称，修改锚点名称，即可定位到指定锚点目标
         triggerDistance //  {Number} 触发距离(像素)，用来修正到达锚点目标的定位，默认0
         dataModel //  {Number} 数据模型，修改此值即可重新计算，适用于页面高度变化、锚点变化等场景
+        navPlaceholder // {Boolean} 是否包含占位DIV，推荐使用。(仅当文档body的scrollTop变化时，配合autoCalc会自动修正pin的位置计算)
+        autoCalc //  {Boolean} 是否自动计算，推荐使用。(仅当文档body的scrollTop变化时，会自动计算锚点的定位，以及navPlaceholder定位)
       </code>
     </pre>
 
@@ -52,10 +54,14 @@
     <pre v-pre>
       <code data-language="html">
          &lt;div id="app"&gt; 
-            &lt;!-- 导航占位 --&gt;
-            &lt;div class="anchor-placeholder"&gt;
+            &lt;!-- 导航占位，不使用navPlaceholder时自行添加 --&gt;
+            &lt;!--div class="anchor-placeholder"&gt;
                 &lt;!-- 锚点导航 --&gt;
-                &lt;fr-anchor-nav v-model="activeAnchor" :data-model="dataModal" :trigger-distance="60"&gt;
+                &lt;fr-anchor-nav v-model="activeAnchor"
+                                :data-model="dataModal"
+                                :nav-placeholder="true"
+                                :auto-calc="true"
+                                :trigger-distance="60"&gt;
                         &lt;!-- 导航分类 --&gt;
                         &lt;span class="nav-item" data-fr-anchor="name_01" :class="{'active': activeAnchor === 'name_01'}"&gt;
                             家居日用
@@ -68,7 +74,7 @@
                         &lt;/span&gt;
                         &lt;!-- 省略 --&gt;
                 &lt;/fr-anchor-nav&gt;
-              &lt;/div&gt;
+              &lt;!--/div--&gt;
 
               &lt;!-- 楼层商品 --&gt;
               &lt;div&gt;
